@@ -1,0 +1,107 @@
+.sidebar {
+  min-height: 100vh;
+  flex: 1;
+  min-width: 200px;
+  border-right: 1px solid rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  // background-color: #303030;
+
+  .logo {
+    // flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #b10dc9;
+    // margin-bottom: 20px;
+  }
+
+  .items {
+    flex: 5;
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+
+    .title {
+      color: rgb(118, 118, 118);
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .item {
+      // width: 100%;
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      padding: 5px;
+      margin-bottom: 2px;
+
+      span {
+        font-size: 0.9rem;
+        text-transform: capitalize;
+      }
+
+      .icon {
+        font-size: 20px;
+        color: #b10dc9;
+        margin-right: 10px;
+        margin-left: 20px;
+      }
+
+      &:hover,
+      &.active {
+        background-color: #b141c2;
+        color: whitesmoke;
+        border-radius: 5px;
+        font-weight: bold;
+
+        .icon {
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+
+  .colorOptions {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      color: rgb(118, 118, 118);
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .options {
+      // margin-top: 10px;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+
+      .colorOption {
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        border: 1px solid rgb(236, 236, 236);
+        cursor: pointer;
+
+        &:nth-child(1) {
+          background-color: whitesmoke;
+        }
+
+        &:nth-child(2) {
+          background-color: #303030;
+        }
+      }
+    }
+  }
+}
