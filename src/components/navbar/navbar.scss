@@ -1,0 +1,108 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+
+  .search {
+    // flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 50%;
+    min-width: 300px;
+    // max-width: px;
+
+    input {
+      width: calc(100% - 30px);
+      border: 1px solid rgb(207, 207, 207);
+      border-right: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      outline: none;
+      padding: 5px;
+      background-color: transparent;
+      //   border: none;
+      padding-left: 10px;
+      color: #b10dc9;
+      font-weight: bold;
+
+      &::placeholder {
+        font-style: italic;
+        color: rgb(118, 118, 118);
+        // padding-left: 10px;
+      }
+    }
+
+    .icon {
+      height: 30px;
+      width: 30px;
+      padding: 5px;
+      text-align: center;
+      color: whitesmoke;
+      background-color: #b10dc9;
+      padding-right: 5px;
+      //   color: rgb(118, 118, 118);
+      cursor: pointer;
+      border: 1px solid transparent;
+      //   border-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    // background-color: red;
+    flex: 1;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    font-weight: 400;
+
+    .action {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      position: relative;
+      cursor: pointer;
+
+      .title {
+      }
+
+      .icon {
+        font-size: 20px;
+        color: rgb(118, 118, 118);
+      }
+
+      .counter {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: red;
+        border-radius: 50%;
+        width: 13px;
+        height: 13px;
+        font-size: 10px;
+        color: whitesmoke;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-color: none;
+      }
+    }
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+}
