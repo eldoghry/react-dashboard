@@ -16,6 +16,10 @@ function FeaturedChart() {
 
         <p>Total sales made today</p>
         <p className="amount">$420</p>
+        <span>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+          iusto dicta asperiores iure aspernatur et repellendus
+        </span>
       </div>
     </div>
   );
