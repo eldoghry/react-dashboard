@@ -11,41 +11,14 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-function Chart() {
-  const data = [
-    {
-      name: "Jan",
-      revenue: 4000,
-    },
-    {
-      name: "Feb",
-      revenue: 2210,
-    },
-    {
-      name: "Mar",
-      revenue: 3120,
-    },
-    {
-      name: "Apr",
-      revenue: 2000,
-    },
-    {
-      name: "May",
-      revenue: 720,
-    },
-    {
-      name: "June",
-      revenue: 1800,
-    },
-  ];
-
+function Chart({ data, width, height, title }) {
   return (
     <div className="chart">
-      <h1 className="title">Last 6 month (Revenue)</h1>
-      <ResponsiveContainer width="100%" height={400}>
+      <h1 className="title">{title}</h1>
+      <ResponsiveContainer width="100%" height={height}>
         <AreaChart
-          width={500}
-          height={400}
+          width={width}
+          height={height}
           data={data}
           margin={{
             top: 10,

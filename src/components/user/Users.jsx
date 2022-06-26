@@ -2,7 +2,7 @@ import DataTable from "../table/DataTable";
 import { Link } from "react-router-dom";
 import DeleteIcon from "@material-ui/icons/Delete";
 
-function Order() {
+function Users() {
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
@@ -77,10 +77,10 @@ function Order() {
   ];
 
   return (
-    <div className="orders">
+    <div className="users">
       <DataTable rows={rows} columns={columns} />
     </div>
   );
 }
 
-export default Order;
+export default Users;

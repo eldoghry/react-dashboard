@@ -6,6 +6,14 @@
   font-size: 10px;
 }
 
+:root {
+  --mainColor: #b10dc9;
+}
+
+a {
+  text-decoration: none;
+}
+
 .App {
   display: flex;
   flex-direction: row;

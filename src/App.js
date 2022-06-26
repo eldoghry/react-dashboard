@@ -3,6 +3,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./components/dashboard/Dashboard";
 import Order from "./components/order/Order";
+import Users from "./components/user/Users";
+import User from "./components/user/User";
 import Single from "./components/single/Single";
 import New from "./components/new/New";
 
@@ -19,15 +21,18 @@ function App() {
           <main>
             <Routes>
               <Route exact path="/" element={<Home />} />
-              <Route exact path="/orders" element={<Order />} />
+              <Route exact path="/orders">
+                <Route exact path=":orderid" element={<Single />} />
+              </Route>
 
               <Route exact path="/products">
                 <Route exact path="new" element={<New />} />
               </Route>
 
               <Route path="users">
+                <Route exact path="" element={<Users />} />
                 <Route exact path="new" element={<New />} />
-                <Route exact path=":userid" element={<Single />} />
+                <Route exact path=":userid" element={<User />} />
               </Route>
               {/* <Route exact path="/login" element={<Login />} />
             <Route

@@ -3,6 +3,7 @@ import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import StoreOutlinedIcon from "@material-ui/icons/StoreOutlined";
 import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutlined";
 import PaymentOutlinedIcon from "@material-ui/icons/PaymentOutlined";
+import { Link } from "react-router-dom";
 
 function Widget({ type }) {
   let data;
@@ -12,12 +13,12 @@ function Widget({ type }) {
       data = {
         title: "users",
         value: 100,
-        link: "see all users",
+        link: <Link to="users">see all users</Link>,
         isMoney: false,
         icon: (
           <PersonOutlineIcon
             className="icon"
-            style={{ backgroundColor: "#F1948A", color: "#c10808" }}
+            style={{ backgroundColor: "#FADBD8", color: "#E74C3C" }}
           />
         ),
       };
@@ -27,7 +28,7 @@ function Widget({ type }) {
       data = {
         title: "orders",
         value: 100,
-        link: "see all orders",
+        link: <Link to="orders">see all orders</Link>,
         isMoney: false,
         icon: (
           <PaymentOutlinedIcon
@@ -42,7 +43,7 @@ function Widget({ type }) {
       data = {
         title: "products",
         value: 100,
-        link: "see all products",
+        link: <Link to="products">see all products</Link>,
         isMoney: false,
         icon: (
           <StoreOutlinedIcon
@@ -57,7 +58,7 @@ function Widget({ type }) {
       data = {
         title: "sales",
         value: 100,
-        link: "see all sales",
+        link: <Link to="sales">see all sales</Link>,
         isMoney: true,
         icon: (
           <MonetizationOnOutlinedIcon

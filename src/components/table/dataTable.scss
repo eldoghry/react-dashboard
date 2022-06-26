@@ -1,0 +1,80 @@
+.datatable {
+  padding: 20px;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  width: 100%;
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .MuiDataGrid-columnHeaderTitle {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .MuiDataGrid-cell {
+    font-size: 1.3rem;
+  }
+
+  .MuiDataGrid-row {
+    &:nth-child(odd) {
+      background-color: rgba(248, 246, 246, 0.441);
+    }
+  }
+
+  .status {
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 15px;
+
+    &.active {
+      background-color: #d4efdf;
+      color: #2ecc71;
+    }
+
+    &.inactive {
+      background-color: #fcf3cf;
+      color: #d4ac0d;
+    }
+
+    &.suspended {
+      background-color: #fadbd8;
+      color: #e74c3c;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    line-height: 10px;
+
+    .icon {
+      font-size: 2rem;
+      color: var(--mainColor);
+    }
+
+    .btn {
+      padding: 5px 10px;
+      border: none;
+      background-color: transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.view {
+        border: 1px solid var(--mainColor);
+        color: var(--mainColor);
+        font-weight: bold;
+      }
+    }
+  }
+}
