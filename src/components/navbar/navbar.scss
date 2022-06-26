@@ -28,6 +28,8 @@
       padding-left: 10px;
       color: #b10dc9;
       font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 18px;
 
       &::placeholder {
         font-style: italic;
@@ -61,7 +63,7 @@
     // background-color: red;
     flex: 1;
     color: rgb(118, 118, 118);
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 400;
 
     .action {
@@ -71,11 +73,12 @@
       position: relative;
       cursor: pointer;
 
-      .title {
+      .langTitle {
+        font-size: 1.5rem;
       }
 
       .icon {
-        font-size: 20px;
+        font-size: 2.2rem;
         color: rgb(118, 118, 118);
       }
 
@@ -85,8 +88,8 @@
         right: -5px;
         background-color: red;
         border-radius: 50%;
-        width: 13px;
-        height: 13px;
+        width: 15px;
+        height: 15px;
         font-size: 10px;
         color: whitesmoke;
         font-weight: bold;
@@ -98,8 +101,8 @@
     }
 
     .avatar {
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
       object-fit: cover;
       cursor: pointer;

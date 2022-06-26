@@ -13,7 +13,7 @@ function Navbar() {
       </div>
       <div className="actions">
         <div className="action lang">
-          <span className="title">English</span>
+          <span className="langTitle">English</span>
           <LanguageOutlinedIcon className="icon" />
         </div>
 

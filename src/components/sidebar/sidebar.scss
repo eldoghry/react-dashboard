@@ -5,8 +5,6 @@
   border-right: 1px solid rgb(236, 236, 236);
   display: flex;
   flex-direction: column;
-s
-
   .logo {
     // flex: 1;
     padding: 20px;
@@ -14,7 +12,7 @@ s
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid rgb(236, 236, 236);
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: bold;
     text-transform: capitalize;
     color: #b10dc9;
@@ -30,7 +28,7 @@ s
     .title {
       color: rgb(118, 118, 118);
       text-transform: uppercase;
-      font-size: 12px;
+      font-size: 1.2rem;
     }
 
     a {
@@ -67,7 +65,7 @@ s
       margin-bottom: 2px;
 
       span {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         text-transform: capitalize;
       }
 
