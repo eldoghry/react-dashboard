@@ -3,9 +3,10 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./components/dashboard/Dashboard";
 import Order from "./components/order/Order";
+import Orders from "./components/order/Orders";
 import Users from "./components/user/Users";
 import User from "./components/user/User";
-import Single from "./components/single/Single";
+// import Single from "./components/single/Single";
 import New from "./components/new/New";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -22,7 +23,8 @@ function App() {
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/orders">
-                <Route exact path=":orderid" element={<Single />} />
+                <Route exact path="" element={<Orders />} />
+                <Route exact path=":orderid" element={<Order />} />
               </Route>
 
               <Route exact path="/products">

@@ -1,7 +1,7 @@
 import Chart from "../charts/Chart";
 import "./user.scss";
 import { Link } from "react-router-dom";
-import { height } from "@mui/system";
+import DataTable from "../table/DataTable";
 
 function User() {
   const data = [
@@ -31,6 +31,21 @@ function User() {
     },
   ];
 
+  const rows = [
+    {
+      id: 1,
+      username: "mma",
+      joinDate: Date.now().toString(),
+      status: "active",
+    },
+    { id: 2, username: "mma", joinDate: Date.now(), status: "inactive" },
+    { id: 3, username: "mma", joinDate: Date.now(), status: "active" },
+    { id: 4, username: "mma", joinDate: Date.now(), status: "active" },
+    { id: 5, username: "mma", joinDate: Date.now(), status: "suspended" },
+    { id: 6, username: "mma", joinDate: Date.now(), status: "active" },
+    { id: 7, username: "mma", joinDate: Date.now(), status: "suspended" },
+  ];
+
   return (
     <div className="user">
       <div className="top">
@@ -42,7 +57,7 @@ function User() {
 
           <div className="container">
             <img
-              src="https://cdn.gamer-network.net/2021/articles/2021-03-04-14-47/Edd_Coates_Headshot.jpg"
+              src="https://t4.ftcdn.net/jpg/02/45/56/35/360_F_245563558_XH9Pe5LJI2kr7VQuzQKAjAbz9PAyejG1.jpg"
               alt="avatar"
               className="avatar"
             />
@@ -78,7 +93,9 @@ function User() {
           />
         </div>
       </div>
-      <div className="bottom"></div>
+      <div className="bottom">
+        <DataTable rows={rows} type="users" title="Last Transactions" />
+      </div>
     </div>
   );
 }

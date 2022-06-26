@@ -31,19 +31,39 @@
     font-size: 1.3rem;
     line-height: 15px;
 
-    &.active {
+    //pending, review, away , progess
+
+    &.active,
+    &.delivered {
       background-color: #d4efdf;
       color: #2ecc71;
     }
 
-    &.inactive {
+    &.inactive,
+    &.processing {
       background-color: #fcf3cf;
       color: #d4ac0d;
     }
 
-    &.suspended {
+    &.suspended,
+    &.canceled {
       background-color: #fadbd8;
       color: #e74c3c;
+    }
+
+    &.pending {
+      background-color: #d6eaf8;
+      color: #2874a6;
+    }
+
+    &.review {
+      background-color: #ebdef0;
+      color: #884ea0;
+    }
+
+    &.away {
+      background-color: #d6dbdf;
+      color: #283747;
     }
   }
 
