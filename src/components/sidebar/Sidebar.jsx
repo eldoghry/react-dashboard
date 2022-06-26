@@ -10,8 +10,6 @@ import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import SupervisorAccountOutlinedIcon from "@material-ui/icons/SupervisorAccountOutlined";
 import { Link } from "react-router-dom";
 
-
-
 const Sidebar = () => {
   function removeActiveClass() {
     document
