@@ -25,7 +25,9 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <div className="logo">echop dashboard</div>
+      <div className="logo">
+        <Link to="/">Admin Dashboard</Link>
+      </div>
 
       <ul className="items">
         <span className="title">main</span>

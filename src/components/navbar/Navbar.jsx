@@ -3,6 +3,10 @@ import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 import NotificationsNoneOutlinedIcon from "@material-ui/icons/NotificationsNoneOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@material-ui/icons/ChatBubbleOutlineOutlined";
 import LanguageOutlinedIcon from "@material-ui/icons/LanguageOutlined";
+import { AppBar, Badge, InputBase, Toolbar, Typography } from "@mui/material";
+import { Search } from "@mui/icons-material/";
+import { Link } from "react-router-dom";
+import { alpha, makeStyles } from "@material-ui/core/styles";
 
 function Navbar() {
   return (
