@@ -8,6 +8,10 @@
 
 :root {
   --mainColor: #b10dc9;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --danger: #dc004e;
+  --titleHead: rgb(118, 118, 118);
 }
 
 a {
@@ -31,7 +35,7 @@ a {
   h1.title {
     text-transform: uppercase;
     font-size: 15px;
-    color: rgb(118, 118, 118);
+    color: var(--titleHead);
     font-weight: bold;
   }
 }
@@ -65,22 +69,22 @@ a {
   }
 
   &.danger {
-    border-color: #dc004e;
-    color: #dc004e;
+    border-color: var(--danger);
+    color: var(--danger);
 
     &:hover {
       color: white;
-      background-color: #dc004e;
+      background-color: var(--danger);
     }
   }
 
   &.warning {
-    border-color: #ff9800;
-    color: #ff9800;
+    border-color: var(--warning);
+    color: var(--warning);
 
     &:hover {
       color: white;
-      background-color: #ff9800;
+      background-color: var(--warning);
     }
   }
 }

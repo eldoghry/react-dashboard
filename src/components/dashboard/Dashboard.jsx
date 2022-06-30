@@ -3,6 +3,8 @@ import "./dashboard.scss";
 
 import FeaturedChart from "../charts/FeaturedChart";
 import Chart from "../charts/Chart";
+import PieChartWithCustomizedLabel from "../charts/PieChartWithCustomizedLabel";
+import TwoSimplePieChart from "../charts/TwoSimplePieChart";
 
 function Home() {
   const data = [
@@ -32,6 +34,21 @@ function Home() {
     },
   ];
 
+  const usersStatistics = [
+    { name: "active", value: 1400 },
+    { name: "inactive", value: 300 },
+    { name: "suspended", value: 300 },
+  ];
+
+  const ordersStatistics = [
+    { name: "pedning", value: 22314 },
+    { name: "review", value: 1400 },
+    { name: "progress", value: 1400 },
+    { name: "away", value: 1400 },
+    { name: "delivered", value: 19300 },
+    { name: "canceled", value: 300 },
+  ];
+
   return (
     <div className="dashboard">
       <div className="widgets">
@@ -43,7 +60,24 @@ function Home() {
 
       <div className="charts">
         <FeaturedChart />
-        <Chart width={"100%"} height={400} data={data} title={'Last 6 month (Revenue)'}/>
+        <Chart
+          width={"100%"}
+          height={400}
+          data={data}
+          title={"Last 6 month (Revenue)"}
+        />
+      </div>
+
+      <div className="charts">
+        <PieChartWithCustomizedLabel
+          title={"Users Statistics"}
+          data={usersStatistics}
+        />
+
+        <TwoSimplePieChart
+          title={"Orders Statistics"}
+          data={ordersStatistics}
+        />
       </div>
     </div>
   );

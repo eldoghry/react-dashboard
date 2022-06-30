@@ -72,15 +72,15 @@
               color: white;
               align-self: flex-end;
               &.active {
-                color: #4caf50;
+                color: var(--success);
               }
 
               &.inactive {
-                color: #ff9800;
+                color: var(--warning);
               }
 
               &.suspended {
-                color: #dc004e;
+                color: var(--danger);
               }
             }
           }
