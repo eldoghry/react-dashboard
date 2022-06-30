@@ -15,7 +15,7 @@ function Stepper() {
       <div className="step">
         <span className="stepTitle">
           <RadioButtonCheckedIcon className="icon" />
-          <span className="title">Pending</span>
+          <span className="title">review</span>
         </span>
         <span className="stepDate">23 May 2021</span>
       </div>
@@ -23,7 +23,7 @@ function Stepper() {
       <div className="step">
         <span className="stepTitle">
           <RadioButtonCheckedIcon className="icon" />
-          <span className="title">Pending</span>
+          <span className="title">away</span>
         </span>
         <span className="stepDate">23 May 2021</span>
       </div>

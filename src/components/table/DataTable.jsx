@@ -4,6 +4,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import { Link } from "react-router-dom";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { Search } from "@mui/icons-material";
+import { Button } from "@mui/material";
 
 function DataTable({ rows, type, title, pageSize }) {
   let columns;
@@ -62,8 +63,6 @@ function DataTable({ rows, type, title, pageSize }) {
                 <Link to={`${params.id}`} className="btn view">
                   view
                 </Link>
-
-                <DeleteIcon className="icon" />
               </div>
             );
           },
@@ -122,6 +121,10 @@ function DataTable({ rows, type, title, pageSize }) {
                 <Link to={`${params.id}`} className="btn view">
                   view
                 </Link>
+
+                <Button>
+                  <DeleteIcon className="icon" />
+                </Button>
               </div>
             );
           },
@@ -183,8 +186,6 @@ function DataTable({ rows, type, title, pageSize }) {
                 <Link to={`${params.id}`} className="btn view">
                   view
                 </Link>
-
-                <DeleteIcon className="icon" />
               </div>
             );
           },
@@ -268,7 +269,7 @@ function DataTable({ rows, type, title, pageSize }) {
         <input type="text" placeholder="Search ... " />
         <Search className="icon" />
       </form>
-      
+
       <DataGrid
         rows={rows}
         columns={columns}

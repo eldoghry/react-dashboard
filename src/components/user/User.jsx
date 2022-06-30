@@ -14,6 +14,12 @@ import {
 } from "@mui/material";
 
 import CustomSnackbar from "../ui/CustomSnackbar";
+import PersonIcon from "@mui/icons-material/Person";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import EmailIcon from "@mui/icons-material/Email";
+import { Fab } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -143,6 +149,17 @@ function User() {
       <div className="top">
         <div className="left">
           <h1 className="title">information</h1>
+          <div className="editBtn">
+            <Fab
+              color="secondary"
+              aria-label="edit"
+              size="small"
+              onClick={() => setOpen(true)}
+            >
+              <EditIcon />
+            </Fab>
+          </div>
+          {/* 
           <button
             className="edit"
             onClick={(e) => {
@@ -151,7 +168,7 @@ function User() {
             }}
           >
             edit
-          </button>
+          </button> */}
 
           <div className="container">
             <img
@@ -165,22 +182,28 @@ function User() {
               </div>
 
               <div className="item">
-                <label htmlFor="name">name</label>
+                {/* <label htmlFor="name">
+                name
+                </label> */}
+                <PersonIcon className="icon" />
                 <span className="name">Mohamed Magdy</span>
               </div>
 
               <div className="item">
-                <label htmlFor="email">email</label>
+                {/* <label htmlFor="email">email</label> */}
+                <EmailIcon className="icon" />
                 <span className="email">moh.mag.ali@gmail.com</span>
               </div>
 
               <div className="item">
-                <label htmlFor="phone">phone</label>
+                {/* <label htmlFor="phone">phone</label> */}
+                <PhoneAndroidIcon className="icon" />
                 <span className="phone">+201143497899</span>
               </div>
 
               <div className="item">
-                <label htmlFor="address">address</label>
+                {/* <label htmlFor="address">address</label> */}
+                <LocationOnIcon className="icon" />
                 <span className="address">Robert Robertson, 1234 NW</span>
               </div>
             </div>
