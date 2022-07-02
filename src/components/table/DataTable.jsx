@@ -23,7 +23,8 @@ function DataTable({ rows, type, title, pageSize }) {
           // align: "center",
         },
         {
-          type: "date",
+          // type: "date",
+          type: "text",
           field: "joinDate",
           headerName: "Join Date",
           width: 150,

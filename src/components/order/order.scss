@@ -20,7 +20,7 @@
       margin-bottom: 20px;
 
       .title {
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
       }
 
       .editBtn {
@@ -51,6 +51,14 @@
 
             span {
               font-size: 1.4rem;
+            }
+
+            .coupan {
+              // font-style: italic;
+              font-weight: bold;
+              color: var(--mainColor);
+              margin-left: 10px;
+              font-size: 1rem;
             }
           }
         }

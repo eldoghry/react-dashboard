@@ -8,46 +8,59 @@ import Users from "./components/user/Users";
 import User from "./components/user/User";
 // import Single from "./components/single/Single";
 import New from "./components/new/New";
+import Grid from "@material-ui/core/Grid";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+const theme = createTheme({});
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Sidebar />
-        <div className="container">
+    <ThemeProvider theme={theme}>
+      <Router>
+        <div className="App">
           <Navbar />
 
-          <main>
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/orders">
-                <Route exact path="" element={<Orders />} />
-                <Route exact path=":orderid" element={<Order />} />
-              </Route>
+          <Grid container spacing={3} className="container">
+            <Grid item xs={2}>
+              <Sidebar />
+            </Grid>
 
-              <Route exact path="/products">
-                <Route exact path="new" element={<New />} />
-              </Route>
+            <Grid item xs={10} className="mainContainer">
+              <div>
+                <main>
+                  <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/orders">
+                      <Route exact path="" element={<Orders />} />
+                      <Route exact path=":orderid" element={<Order />} />
+                    </Route>
 
-              <Route path="users">
-                <Route exact path="" element={<Users />} />
-                <Route exact path="new" element={<New />} />
-                <Route exact path=":userid" element={<User />} />
-              </Route>
-              {/* <Route exact path="/login" element={<Login />} />
-            <Route
-            exact
-            path="/recovery-password"
-            element={<RecoveryPassword />}
-            />
-          <Route path="*" element={<NotFound />} /> */}
-            </Routes>
-          </main>
+                    <Route exact path="/products">
+                      <Route exact path="new" element={<New />} />
+                    </Route>
+
+                    <Route path="users">
+                      <Route exact path="" element={<Users />} />
+                      <Route exact path="new" element={<New />} />
+                      <Route exact path=":userid" element={<User />} />
+                    </Route>
+                    {/* <Route exact path="/login" element={<Login />} />
+                      <Route
+                      exact
+                      path="/recovery-password"
+                      element={<RecoveryPassword />}
+                      />
+                      <Route path="*" element={<NotFound />} /> */}
+                  </Routes>
+                </main>
+              </div>
+            </Grid>
+          </Grid>
+          {/*eof container */}
         </div>
-      </div>
-    </Router>
+      </Router>
+    </ThemeProvider>
   );
 }
 

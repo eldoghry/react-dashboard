@@ -94,7 +94,7 @@ function Order() {
                   <div className="item">
                     <label>discount: </label>
                     <span>20</span>
-                    <span className="coupan">(xyza)</span>
+                    <span className="coupan">( D3%fGH123OKK )</span>
                   </div>
 
                   <div className="item">
@@ -132,7 +132,10 @@ function Order() {
           <div className="right">
             <h1 className="title">Order History</h1>
             {/* <VerticalStepper history={orderHistory} /> */}
-            <Stepper />
+            <Stepper title="pending" date="23 May 2022" />
+            <Stepper title="review" date="24 May 2022" />
+            <Stepper title="away" date="27 May 2022" />
+            <Stepper title="delivered" date="02 Jun 2022" />
           </div>
         </Grid>
       </Grid>

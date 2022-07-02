@@ -77,7 +77,8 @@ function User() {
       id: 1,
       total: 924,
       count: 3,
-      createdAt: Date.now().toString(),
+      // createdAt: Date.now().toString(),
+      createdAt: "2 Jun 2022",
       status: "pending",
     },
 
@@ -85,7 +86,7 @@ function User() {
       id: 2,
       total: 1025,
       count: 17,
-      createdAt: Date.now().toString(),
+      createdAt: "2 Jun 2022",
       status: "delivered",
     },
 
@@ -93,7 +94,7 @@ function User() {
       id: 3,
       total: 90,
       count: 2,
-      createdAt: Date.now().toString(),
+      createdAt: "2 Jun 2022",
       status: "canceled",
     },
 
@@ -101,7 +102,7 @@ function User() {
       id: 4,
       total: 135.5,
       count: 6,
-      createdAt: Date.now().toString(),
+      createdAt: "2 Jun 2022",
       status: "away",
     },
 
@@ -109,7 +110,7 @@ function User() {
       id: 5,
       total: 135.5,
       count: 6,
-      createdAt: Date.now().toString(),
+      createdAt: "2 Jun 2022",
       status: "processing",
     },
   ];

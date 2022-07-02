@@ -1,23 +1,12 @@
 .sidebar {
   min-height: 100vh;
-  flex: 1;
+  position: fixed;
+  // flex: 1;
   min-width: 200px;
   border-right: 1px solid rgb(236, 236, 236);
   display: flex;
   flex-direction: column;
-  .logo a {
-    // flex: 1;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid rgb(236, 236, 236);
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: capitalize;
-    color: var(--mainColor);
-    // margin-bottom: 20px;
-  }
+
 
   .items {
     flex: 5;
@@ -71,7 +60,7 @@
 
       .icon {
         font-size: 20px;
-        color: #b10dc9;
+        color: var(--mainColor);
         margin-right: 10px;
         margin-left: 20px;
       }

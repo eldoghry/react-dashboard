@@ -15,16 +15,16 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(productName, qty, uprice, total) {
+  return { productName, qty, uprice, total };
 }
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Red Bag", 1, 150, 24),
+  createData("Smart watch", 2, 890, 37),
+  createData("Iphone Pro", 1, 5780, 24),
+  createData("Iron man toy", 3, 99, 67),
+  createData("Black Shoes", 1, 16.0, 49),
 ];
 
 export default function BasicTable({ title }) {
@@ -37,23 +37,22 @@ export default function BasicTable({ title }) {
         <Table className={classes.table} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Dessert (100g serving)</TableCell>
-              <TableCell align="right">Calories</TableCell>
-              <TableCell align="right">Fat&nbsp;(g)</TableCell>
-              <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-              <TableCell align="right">Protein&nbsp;(g)</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell align="right">QTY</TableCell>
+              <TableCell align="right">Unit Price</TableCell>
+              <TableCell align="right">Total</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
-              <TableRow key={row.name}>
+              <TableRow key={row.id}>
                 <TableCell component="th" scope="row">
-                  {row.name}
+                  {row.productName}
                 </TableCell>
-                <TableCell align="right">{row.calories}</TableCell>
-                <TableCell align="right">{row.fat}</TableCell>
-                <TableCell align="right">{row.carbs}</TableCell>
-                <TableCell align="right">{row.protein}</TableCell>
+                {/* <TableCell align="right">{row.productName}</TableCell> */}
+                <TableCell align="right">{row.qty}</TableCell>
+                <TableCell align="right">{row.uprice}</TableCell>
+                <TableCell align="right">{row.qty * row.uprice}</TableCell>
               </TableRow>
             ))}
           </TableBody>
