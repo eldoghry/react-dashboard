@@ -1,0 +1,40 @@
+.featured {
+  flex: 1;
+  padding: 20px;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+  .featuredContainer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .progressbar {
+      width: 50%;
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: rgb(118, 118, 118);
+      font-weight: 400;
+      //   text-transform: capitalize;
+
+      &.amount {
+        font-size: 2rem;
+        font-weight: 400;
+        color: black;
+      }
+    }
+
+    span {
+      color: lightgray;
+      text-align: center;
+      line-height: 30px;
+      font-size: 1.2rem;
+    }
+  }
+}
