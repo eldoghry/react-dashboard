@@ -28,7 +28,7 @@ const Sidebar = () => {
   const { currentColor, setActiveMenu } = useStateContext();
 
   const activeLink = `flex items-center capitalize rounded-lg gap-3 p-2 text-sm text-white font-bold active`;
-  const normalLink = `flex items-center capitalize rounded-lg gap-3 p-2 text-sm hover:bg-gray-100`;
+  const normalLink = `flex items-center capitalize rounded-lg gap-3 p-2 text-sm hover:bg-gray-100 dark:text-white dark:hover:text-slate-900`;
 
   function removeActiveClass() {
     document
@@ -50,13 +50,16 @@ const Sidebar = () => {
         className="flex justify-between items-center p-4"
         style={{ color: currentColor }}
       >
-        <Link to="/" className="text-lg font-bold capitalize">
+        <Link
+          to="/"
+          className="text-lg font-bold capitalize dark:text-gray-300"
+        >
           Admin dashboard
         </Link>
 
         <Tooltip title="Menu" className="p-1 ml-4">
           <IconButton
-            className=" text-slate-400"
+            className=" text-slate-400 dark:text-gray-300"
             onClick={() => setActiveMenu(false)}
           >
             <ClearIcon style={{ fontSize: "1.2rem" }} />
@@ -87,7 +90,7 @@ const Sidebar = () => {
                       }
                     >
                       <span
-                        className={`icon text-[${currentColor}] dark:text-white`}
+                        className={`icon text-[${currentColor}] dark:text-gray-300 dark:hover:text-slate-900`}
                       >
                         {link.icon}
                       </span>

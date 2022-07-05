@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { IconButton, Tooltip } from "@mui/material";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import ThemeSetting from "./components/ui/ThemeSetting";
+import { Dashboard } from "@mui/icons-material";
 
 const theme = createTheme({});
 
@@ -22,9 +23,9 @@ function App() {
   const { currentColor, activeMenu, setThemeSettingMenu, themeSettingMenu } =
     useStateContext();
   return (
-    <div>
+    <div className="dark">
       <BrowserRouter>
-        <div className="flex bg-light-gray h-screen w-screen relative">
+        <div className="flex bg-light-gray dark:bg-secondary-dark-bg h-screen w-screen relative">
           {/* sidebar */}
           <div
             className={`flex fixed h-screen bg-white dark:bg-main-dark-bg shadow-lg ease duration-300 ${
@@ -50,6 +51,7 @@ function App() {
           {/* container */}
           <div className={`w-full ${activeMenu ? "ml-72" : ""}`}>
             <Navbar />
+            {/* <Home /> */}
           </div>
         </div>
 

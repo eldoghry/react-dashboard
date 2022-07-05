@@ -10,15 +10,15 @@ const ThemeSetting = () => {
 
   return (
     <div className="w-screen h-screen bg-half-transparent fixed top-0 left-0 z-40">
-      <div className="h-screen bg-white w-72 float-right p-3">
+      <div className="h-screen bg-white dark:bg-main-dark-bg w-72 float-right p-3">
         <div className="flex items-center justify-between">
-          <p className="text-xl font-semibold capitalize text-slate-900">
+          <p className="text-xl font-semibold capitalize text-slate-900 dark:text-gray-300">
             settings
           </p>
 
           <Tooltip title="close" className="p-1 ml-4">
             <IconButton
-              className=" text-slate-400"
+              className=" text-slate-400 dark:text-gray-300"
               onClick={() => {
                 setThemeSettingMenu(false);
               }}
@@ -29,7 +29,7 @@ const ThemeSetting = () => {
         </div>
 
         <div className="mt-3 border-t-1 border-color">
-          <p className="text-lg font-semibold capitalize text-slate-900 mb-2 mt-2">
+          <p className="text-lg font-semibold capitalize text-slate-900 dark:text-gray-300 mb-2 mt-2">
             theme colors
           </p>
           <div className="flex flex-wrap gap-2">

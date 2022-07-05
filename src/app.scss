@@ -24,6 +24,17 @@
   }
 }
 
+.dark {
+  a {
+    &:hover {
+      .icon {
+        --tw-text-opacity: 1;
+        color: rgb(15 23 42 / var(--tw-text-opacity));
+      }
+    }
+  }
+}
+
 // :root {
 //   --mainColor: #b10dc9;
 //   --success: #4caf50;
