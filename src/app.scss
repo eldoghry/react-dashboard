@@ -4,6 +4,7 @@
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
   // font-size: 10px;
+  // transition: all 0.3s ease-out;
 }
 
 ::-webkit-scrollbar {
@@ -15,6 +16,12 @@
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+.active {
+  .icon {
+    color: white !important;
+  }
 }
 
 // :root {

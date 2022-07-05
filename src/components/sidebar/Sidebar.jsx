@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 const Sidebar = () => {
   const { currentColor, setActiveMenu } = useStateContext();
 
-  const activeLink = `flex items-center capitalize rounded-lg gap-3 p-2 text-sm text-white font-bold`;
+  const activeLink = `flex items-center capitalize rounded-lg gap-3 p-2 text-sm text-white font-bold active`;
   const normalLink = `flex items-center capitalize rounded-lg gap-3 p-2 text-sm hover:bg-gray-100`;
 
   function removeActiveClass() {
@@ -45,30 +45,30 @@ const Sidebar = () => {
   const classes = useStyles();
 
   return (
-    <div className="p-5 bg-white dark:bg-main-dark-bg w-full overflow-auto">
+    <div className=" bg-white dark:bg-main-dark-bg w-full overflow-auto">
       <div
-        className=" mb-5 flex justify-between items-center"
+        className="flex justify-between items-center p-4"
         style={{ color: currentColor }}
       >
-        <Link to="/" className="text-xl font-bold capitalize">
+        <Link to="/" className="text-lg font-bold capitalize">
           Admin dashboard
         </Link>
 
-        <Tooltip title="Menu">
+        <Tooltip title="Menu" className="p-1 ml-4">
           <IconButton
-            className="text-xs text-slate-900"
+            className=" text-slate-400"
             onClick={() => setActiveMenu(false)}
           >
-            <ClearIcon />
+            <ClearIcon style={{ fontSize: "1.2rem" }} />
           </IconButton>
         </Tooltip>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col ml-4 pr-3">
         {links.map((item) => {
           return (
             <div key={item.title}>
-              <p className="text-gray-400 text-sm capitalize mt-3 mb-2">
+              <p className="text-gray-400 text-sm capitalize mt-2 mb-1">
                 {item.title}
               </p>
               <ul className="flex flex-col gap-2">
@@ -86,7 +86,11 @@ const Sidebar = () => {
                         isActive ? activeLink : normalLink
                       }
                     >
-                      {link.icon}
+                      <span
+                        className={`icon text-[${currentColor}] dark:text-white`}
+                      >
+                        {link.icon}
+                      </span>
                       <span>{link.name}</span>
                     </NavLink>
                   );

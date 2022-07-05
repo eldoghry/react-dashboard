@@ -12,17 +12,43 @@ import Grid from "@material-ui/core/Grid";
 import { useStateContext } from "./context/ContextProvider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { IconButton, Tooltip } from "@mui/material";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import ThemeSetting from "./components/ui/ThemeSetting";
+
 const theme = createTheme({});
 
 function App() {
-  const { currentColor, setActiveMenu } = useStateContext();
+  const { currentColor, activeMenu, setThemeSettingMenu } = useStateContext();
   return (
     <div>
       <BrowserRouter>
-        <div className="bg-light-gray h-screen w-screen">
+        <div className="flex bg-light-gray h-screen w-screen relative">
           {/* sidebar */}
-          <div className="flex h-screen w-72 bg-white dark:bg-main-dark-bg shadow-lg fixed">
+          <div
+            className={`flex fixed h-screen bg-white dark:bg-main-dark-bg shadow-lg ease duration-300 ${
+              activeMenu ? "w-72" : "w-0"
+            }`}
+          >
             <Sidebar />
+          </div>
+
+          <div className="absolute bottom-7 right-7">
+            <Tooltip title="settings" style={{ background: currentColor }}>
+              <IconButton
+                className=" text-white"
+                onClick={() => setThemeSettingMenu(false)}
+              >
+                <SettingsOutlinedIcon />
+              </IconButton>
+            </Tooltip>
+          </div>
+
+          <ThemeSetting />
+
+          {/* container */}
+          <div className={`w-full ${activeMenu ? "ml-72" : ""}`}>
+            <Navbar />
           </div>
         </div>
 
