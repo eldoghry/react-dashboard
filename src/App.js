@@ -19,7 +19,8 @@ import ThemeSetting from "./components/ui/ThemeSetting";
 const theme = createTheme({});
 
 function App() {
-  const { currentColor, activeMenu, setThemeSettingMenu } = useStateContext();
+  const { currentColor, activeMenu, setThemeSettingMenu, themeSettingMenu } =
+    useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -37,14 +38,14 @@ function App() {
             <Tooltip title="settings" style={{ background: currentColor }}>
               <IconButton
                 className=" text-white"
-                onClick={() => setThemeSettingMenu(false)}
+                onClick={() => setThemeSettingMenu(true)}
               >
                 <SettingsOutlinedIcon />
               </IconButton>
             </Tooltip>
           </div>
 
-          <ThemeSetting />
+          {themeSettingMenu && <ThemeSetting />}
 
           {/* container */}
           <div className={`w-full ${activeMenu ? "ml-72" : ""}`}>

@@ -3,9 +3,11 @@ import React, { createContext, useContext, useState } from "react";
 const StateContext = createContext();
 
 export const ContextProvider = ({ children }) => {
+  const initialThemeColor = localStorage.getItem("colorMode") || "#1A97F5";
+
   const [activeMenu, setActiveMenu] = useState(true);
   const [themeSettingMenu, setThemeSettingMenu] = useState(false);
-  const [currentColor, setCurrentColor] = useState("#1A97F5");
+  const [currentColor, setCurrentColor] = useState(initialThemeColor);
 
   const activeThemeSettingMenu = () => {
     setThemeSettingMenu(!themeSettingMenu);
@@ -14,7 +16,7 @@ export const ContextProvider = ({ children }) => {
 
   const setColorMode = (color) => {
     setCurrentColor(color);
-    setThemeSettingMenu(false);
+    // setThemeSettingMenu(false);
     localStorage.setItem("colorMode", color);
   };
 
